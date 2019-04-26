@@ -12,11 +12,10 @@
 </head>
 <body class="container">
 	<nav class="nav nav-masthead justify-content-center">
-		<a class="nav-link active" href="/casadocodigo">Home</a> <a
-			class="nav-link" href="/casadocodigo/produtos">Produtos</a> <a
-			class="nav-link"
-			href="https://github.com/leonardofaria00/casadocodigo-spring"
-			target="_blank">Git</a>
+		<a class="nav-link active" href="/casadocodigo">Home</a>
+		<a class="nav-link" href="/casadocodigo/produtos">Produtos</a> 
+		<a class="nav-link" href="/casadocodigo/produtos/lista">Listar</a> 
+		<a class="nav-link" href="https://github.com/leonardofaria00/casadocodigo-spring" target="_blank">Git</a>
 	</nav>
 	<div class="text-center">
 		<h1>Spring MVC View</h1>

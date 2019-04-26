@@ -32,4 +32,10 @@ public class ProdutoController {
 		dao.salvarDAO(produto);
 		return "produto/sucesso";
 	}
+
+	@RequestMapping("/produtos/lista")
+	public String lista() {
+		System.out.println("Chamando lista de Livros");
+		return "produto/lista";
+	}
 }
