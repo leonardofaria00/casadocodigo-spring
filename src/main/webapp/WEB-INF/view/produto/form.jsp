@@ -26,7 +26,7 @@
 				type="number" name="pagina" />
 		</div>
 		<button type="submit" class="btn btn-primary">Cadastrar</button>
-
+		<a class="btn btn-secondary" href="/casadocodigo">Voltar</a>
 	</form>
 </body>
 </html>
