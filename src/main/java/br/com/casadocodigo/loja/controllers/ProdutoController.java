@@ -13,15 +13,15 @@ public class ProdutoController {
 	@Autowired
 	private ProdutoDAO dao;
 
-	@RequestMapping("/produtos/form")
+	@RequestMapping("/produtos")
 	public String form() {
-		System.out.println("Chamando Controller cadastro de produtos");
+		System.out.println("Chamando Controller form de produtos");
 		return "produto/formCadastro";
 	}
 
-	@RequestMapping("/produtos")
-	public String salvarLivro(Produto produto) {
-		System.out.println("Salvando Livro: " + produto.getTitulo());
+	@RequestMapping("/produtos/add")
+	public String salvar(Produto produto) {
+		System.out.println("Salvando Livro: " + produto);
 		dao.salvarDAO(produto);
 		return "produto/sucesso";
 	}

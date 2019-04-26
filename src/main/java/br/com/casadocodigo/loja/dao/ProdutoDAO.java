@@ -8,8 +8,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import br.com.casadocodigo.loja.models.Produto;
 
-@Transactional
 @Repository
+@Transactional
 public class ProdutoDAO {
 
 	@PersistenceContext

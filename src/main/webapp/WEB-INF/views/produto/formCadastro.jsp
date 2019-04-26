@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="/casadocodigo/produtos" method="post">
+	<form action="/casadocodigo/produtos/add" method="post">
 		<div>
 			<label>Título:</label> <input type="text" name="titulo">
 		</div>
