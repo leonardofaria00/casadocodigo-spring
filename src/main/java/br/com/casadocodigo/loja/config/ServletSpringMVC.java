@@ -1,6 +1,8 @@
-package br.com.casadocodigo.loja.conf;
+package br.com.casadocodigo.loja.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+
+import br.com.casadocodigo.loja.dao.ProdutoDAO;
 
 public class ServletSpringMVC extends AbstractAnnotationConfigDispatcherServletInitializer {
 
@@ -12,13 +14,12 @@ public class ServletSpringMVC extends AbstractAnnotationConfigDispatcherServletI
 
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		// TODO Auto-generated method stub
-		return new Class[] { AppWebConfiguration.class };// Adicionando uma classe de configuração para meu servlet
+		return new Class[] { AppWebConfiguration.class, ProdutoDAO.class };
 	}
 
 	@Override
 	protected String[] getServletMappings() {
-		return new String[] { "/" };// Mapeando a partir do /
+		return new String[] { "/" }; // retorna todos os mapeamentos a partir do /
 	}
 
 }

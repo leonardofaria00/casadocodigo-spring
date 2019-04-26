@@ -1,4 +1,4 @@
-package br.com.casadocodigo.loja.conf;
+package br.com.casadocodigo.loja.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -11,7 +11,7 @@ import br.com.casadocodigo.loja.controllers.HomeController;
 @ComponentScan(basePackageClasses = { HomeController.class })
 public class AppWebConfiguration {
 
-	@Bean // Dizendo que esse método é gerenciado pelo Spring MVC
+	@Bean
 	public InternalResourceViewResolver internalResourceViewResolver() {
 		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
 		resolver.setPrefix("WEB-INF/views/");
