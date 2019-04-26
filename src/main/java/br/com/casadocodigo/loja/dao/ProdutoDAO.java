@@ -8,6 +8,13 @@ import org.springframework.transaction.annotation.Transactional;
 
 import br.com.casadocodigo.loja.models.Produto;
 
+/**
+ * 
+ * @author Leonardo Faria
+ * 
+ * Sempre anotar com @Repository, @Transactional e @PersistenceContext
+ *
+ */
 @Repository
 @Transactional
 public class ProdutoDAO {
@@ -16,7 +23,7 @@ public class ProdutoDAO {
 	private EntityManager manager;
 
 	public void salvarDAO(Produto produto) {
-		System.out.println("persistindo dados no banco");
+		System.out.println("Salvando " + produto);
 		manager.persist(produto);
 	}
 }

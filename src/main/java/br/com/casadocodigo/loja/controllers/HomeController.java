@@ -3,12 +3,18 @@ package br.com.casadocodigo.loja.controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+/**
+ * 
+ * @author Leonardo Faria
+ *
+ *  Anotar com @Controller e @RequestMapping.
+ */
 @Controller
 public class HomeController {
 
 	@RequestMapping("/")
 	public String index() {
-		System.out.println("Chamando o método index");
+		System.out.println("Acessando a raiz");
 		return "home";
 	}
 }

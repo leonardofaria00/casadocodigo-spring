@@ -2,11 +2,17 @@ package br.com.casadocodigo.loja.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+/**
+ * 
+ * @author Leonardo Faria 
+ * 
+ * Extender a AbstractAnnotationConfigDispatcherServletInitializer
+ * Adiciono ao método getServletConfigClasses as classes AppWebConfiguration e JPAConfiguration
+ */
 public class ServletSpringMVC extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -17,7 +23,7 @@ public class ServletSpringMVC extends AbstractAnnotationConfigDispatcherServletI
 
 	@Override
 	protected String[] getServletMappings() {
-		return new String[] { "/" }; // retorna todos os mapeamentos a partir do /
+		return new String[] { "/" };
 	}
 
 }
