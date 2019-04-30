@@ -33,7 +33,7 @@ public class ProdutoController {
 	@RequestMapping("/produtos/add")
 	public ModelAndView salvar(Produto produto) {
 		System.out.println("Chamando salvar Livro");
-		dao.salvarDAO(produto);
+		dao.salvar(produto);
 		ModelAndView view = new ModelAndView("produto/sucesso");
 		return view;
 	}
@@ -41,9 +41,13 @@ public class ProdutoController {
 	@RequestMapping("/produtos/lista")
 	public ModelAndView lista() {
 		System.out.println("Chamando lista de Livros");
-		List<Produto> produtos = dao.listar();
+		List<Produto> produtos = dao.buscar();
 		ModelAndView view = new ModelAndView("produto/lista");
 		view.addObject("livros", produtos);
 		return view;
+	}
+	
+	public void buscarPorId() {
+		System.out.println("Listando livro por id");
 	}
 }

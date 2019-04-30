@@ -24,12 +24,19 @@ public class ProdutoDAO {
 	@PersistenceContext
 	private EntityManager manager;
 
-	public void salvarDAO(Produto produto) {
-		System.out.println("Salvando " + produto);
-		manager.persist(produto);
+	public void salvar(Produto produto) {
+		if (produto.getId().equals(null)) {
+			System.out.println("Salvando " + produto);
+			manager.persist(produto);
+		} else {
+			System.out.println("Atualizando " + produto);
+			manager.merge(produto);
+		}
+
 	}
 
-	public List<Produto> listar() {
+	public List<Produto> buscar() {
+		System.out.println("Buscanto todos os livros");
 		return manager.createQuery("select p from Produto p", Produto.class).getResultList();
 	}
 
