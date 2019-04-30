@@ -1,9 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Livro de OCA, Ruby, PHP e muito mais - Casa do Código</title>
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -30,16 +31,18 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr class="text-center">
-				<th scope="row">1</th>
-				<td>Mark</td>
-				<td>Otto</td>
-				<td>@mdo</td>
-				<td>
-					<a href="#"><i class="fas fa-pen"></i></a>
-					<a href="#"><i class="fas fa-trash-alt"></i></a>
-				</td>
-			</tr>
+			<c:forEach items="${livros}" var="livro">
+				<tr class="text-center">
+					<th scope="row">${livro.id}</th>
+					<td>${livro.titulo}</td>
+					<td>${livro.descricao}</td>
+					<td>${livro.pagina}</td>
+					<td>
+						<a href="#"><i class="fas fa-pen"></i></a>
+						<a href="#"><i class="fas fa-trash-alt"></i></a>
+					</td>
+				</tr>
+			</c:forEach>
 		</tbody>
 	</table>
 </body>
