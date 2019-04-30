@@ -3,6 +3,7 @@ package br.com.casadocodigo.loja.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import br.com.casadocodigo.loja.dao.ProdutoDAO;
 import br.com.casadocodigo.loja.models.Produto;
@@ -21,21 +22,25 @@ public class ProdutoController {
 	private ProdutoDAO dao;
 
 	@RequestMapping("/produtos")
-	public String form() {
+	public ModelAndView form() {
 		System.out.println("Chamando formulário de cadastro do Livro");
-		return "produto/form";
+		ModelAndView view = new ModelAndView("produto/form");
+		return view;
 	}
 
 	@RequestMapping("/produtos/add")
-	public String salvar(Produto produto) {
-		System.out.println("Chamou método salvarLivro");
+	public ModelAndView salvar(Produto produto) {
+		System.out.println("Chamando salvar Livro");
 		dao.salvarDAO(produto);
-		return "produto/sucesso";
+		ModelAndView view = new ModelAndView("produto/sucesso");
+		return view;
 	}
 
 	@RequestMapping("/produtos/lista")
-	public String lista() {
+	public ModelAndView lista() {
 		System.out.println("Chamando lista de Livros");
-		return "produto/lista";
+		ModelAndView view = new ModelAndView("produto/lista");
+		view.addObject("livros", Produto.class);
+		return view;
 	}
 }

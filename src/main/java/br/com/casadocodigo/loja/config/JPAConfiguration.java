@@ -11,18 +11,18 @@ import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+
 /**
  * 
  * @author Leonardo Faria
  *
- * Anotar com @EnableTransactionManagement e @Bean
+ *         Anotar com @EnableTransactionManagement e @Bean
  * 
- * Implementar método LocalContainerEntityManagerFactoryBean()
- * Instancia o objeto LocalContainerEntityManagerFactoryBean
- * Instancia o objeto HibernateJpaVendorAdapter do tipo JpaVendorAdapter
- * Instancia o objeto DriverManagerDataSource
- * Instancia o objeto Properties
- * Implementar método JpaTransactionManager()
+ *         Implementar método LocalContainerEntityManagerFactoryBean() Instancia
+ *         o objeto LocalContainerEntityManagerFactoryBean Instancia o objeto
+ *         HibernateJpaVendorAdapter do tipo JpaVendorAdapter Instancia o objeto
+ *         DriverManagerDataSource Instancia o objeto Properties Implementar
+ *         método JpaTransactionManager()
  *
  */
 @EnableTransactionManagement
@@ -55,6 +55,6 @@ public class JPAConfiguration {
 
 	@Bean
 	public JpaTransactionManager transactionManager(EntityManagerFactory emf) {
-		return new JpaTransactionManager(emf);
+		return new JpaTransactionManager(emf);// 6 criado um JpaTransactionManager
 	}
 }

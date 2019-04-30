@@ -12,7 +12,7 @@ import br.com.casadocodigo.loja.models.Produto;
  * 
  * @author Leonardo Faria
  * 
- * Sempre anotar com @Repository, @Transactional e @PersistenceContext
+ *         Sempre anotar com @Repository, @Transactional e @PersistenceContext
  *
  */
 @Repository
@@ -25,5 +25,10 @@ public class ProdutoDAO {
 	public void salvarDAO(Produto produto) {
 		System.out.println("Salvando " + produto);
 		manager.persist(produto);
+	}
+
+	public void buscaProdutos() {
+		System.out.println("Buscanto todos os livros");
+		manager.find(Produto.class, 10);
 	}
 }
