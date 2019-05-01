@@ -25,7 +25,7 @@ public class ProdutoDAO {
 	private EntityManager manager;
 
 	public void salvar(Produto produto) {
-		if (produto.getId().equals(null)) {
+		if (produto.getId() == null) {
 			System.out.println("Salvando " + produto);
 			manager.persist(produto);
 		} else {
